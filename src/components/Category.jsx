@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import AddCategory from './AddCategory'
 import MovieList from './MovieList'
 
@@ -8,11 +8,12 @@ const Category = () => {
 
 
     return (
-        <div className=" movieList flex flex-col flex-wrap   rounded-lg shadow-xl p-6  items-center justify-center">
-            <h1 className="m-5">Ingrese el nick de su peli</h1>
+        <div className="  flex flex-col flex-wrap   rounded-lg  p-6  items-center justify-center">
+            <h1 class="p-5 flex-auto text-lg font-semibold text-slate-900">
+                Buscador de Películas
+            </h1>
             <AddCategory setCategorias={setCategorias} />
 
-            {/* <button onClick={handleButton}  >Agregar panchos</button> */}
 
             <div className="category">
                 {

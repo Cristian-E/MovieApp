@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import React, { useState } from 'react'
 
 const AddCategory = ({ setCategorias }) => {
@@ -12,7 +11,7 @@ const AddCategory = ({ setCategorias }) => {
         e.preventDefault()
         if (inputValue.trim().length > 2) {
 
-            setCategorias(cats => [inputValue, ...cats])
+            setCategorias(cats => [inputValue])
             setInputValue("")
         }
 
@@ -21,20 +20,20 @@ const AddCategory = ({ setCategorias }) => {
     return (
         <form onSubmit={handleSubmit}>
             <input
-                className="border border-gray-300 p-2 rounded-lg shadow-md hover:border-blue-500 focus:outline-none focus:ring focus:border-blue-500 p-2 rounded-md"
+                className="border w-700 border-gray-300 p-2 rounded-lg shadow-md hover:border-blue-500 focus:outline-none focus:ring focus:border-blue-500 rounded-md"
 
                 type="text"
                 value={inputValue}
                 onChange={handleInputChange}
                 name=""
                 id="" />
+            <button onClick={handleSubmit} >
+                <i class="fa-solid p-5 fa-magnifying-glass input-search "></i>
+            </button>
         </form>
     )
 }
 
-AddCategory.PropTypes = {
-    setCategorias: PropTypes.func.isRequired
-}
 
 
 

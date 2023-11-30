@@ -4,10 +4,23 @@
 
 
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-.card {
-    border-radius: 30px;
-    background: #e0e0e0;
-    box-shadow: 15px 15px 30px #bebebe,
-        -15px -15px 30px #ffffff;
+
+.category {
+    height: 100%;
+}
+
+.MovieList {
+    height: 100%;
+}
+
+.input-search {
+    border-radius: 100%;
+    font-size: 20px;
+    font-weight: bold;
 }
